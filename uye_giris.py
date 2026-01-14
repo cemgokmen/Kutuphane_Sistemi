@@ -3,12 +3,12 @@ from uye_islemleri import uye_kayit, uye_giris
 
 def ana_menu():
     while True:
-        print("\n" + "="*30)
+        print("\n" + "="*30) 
         print("📚 KÜTÜPHANE SİSTEMİ - GİRİŞ")
         print("="*30)
         print("1. Üye Ol")
         print("2. Giriş Yap")
-        print("3. Çıkış")
+        print("3. Çıkış yap")
         
         secim = input("Seçiminiz (1-3): ")
 
