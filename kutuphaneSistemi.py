@@ -3,7 +3,7 @@ class Kutuphane:
         self.kitaplar = {
         "Sefiller": {"yazar":"Victor Hugo","durum":"Rafta"},
         "Nutuk": {"yazar":"Mustafa Kemal Atatürk","durum":"Rafta"},
-        "1984": {"yazar":"George Orwell","durum":"Rafta"}
+        "1984": {"yazar":"George Orwell","durum":"Rafta vs"}
     }
     
     def kitaplari_listele(self):
