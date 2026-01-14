@@ -6,7 +6,7 @@ class Kutuphane:
         "1984": {"yazar":"George Orwell","durum":"Rafta"}
     }
     
-    def kitaplari_listele(self):
+    def kitaplari_listele(self): #a
             print("---KÜTÜPHANE ARŞİVİ---")
             for ad, bilgi in self.kitaplar.items():
                 durum_ikonu = "✅" if bilgi["durum"] == "Rafta" else "❌"
