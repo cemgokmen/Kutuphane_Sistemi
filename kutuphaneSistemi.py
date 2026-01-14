@@ -24,16 +24,30 @@ class Kutuphane:
         if secim in self.kitaplar:
             if self.kitaplar[secim]["durum"] == "Rafta":
                 self.kitaplar[secim]["durum"] == "Ödünç verildi"
-                print(f"Başarılı! {secim} kitabını aldınız")
+                print(f"Başarılı! '{secim}' kitabını aldınız")
             else:
                 print("Kitap şu an Başkasında ")
         else:
             print("Sistemimizde böyle bir kitap bulunmamaktadır")
             
+    
+    def kitap_iade_et(self):
+        self.kitaplari_listele()
+        secim = input("\nİade etmek istediğiniz kitabın adını giriniz: ")
+        
+        if secim in self.kitaplar:
+            if self.kitaplar[secim]["durum"] == "Ödünç Verildi":
+                self.kitaplar[secim]["durum"] = "Rafta"
+                print(f">>> Teşekkürler! '{secim}' kitabı iade alındı. ✅")
+            else:
+                print(">>> Bu kitap zaten kütüphanede (Rafta).")
+        else:
+            print(">>> Bu kitap bizim kütüphaneye ait değil.")
+            
 
 kutuphane = Kutuphane()
 while True:
-    print("1. Listele\n2. Ekle\n3. Ödünç Al\n4. Çıkış\n")
+    print("1. Listele\n2. Ekle\n3. Ödünç Al\n4. İade Et\n5. Çıkış Yap\n")
     secim = input("Lütfen yapmak istediğiniz işlemi tuşlayınız: ")
     if secim == '1':
         kutuphane.kitaplari_listele()
@@ -42,6 +56,8 @@ while True:
     elif secim == '3':
         kutuphane.kitap_odunc_al()
     elif secim == '4':
+        kutuphane.kitap_iade_et() #yeni eklediğimiz
+    elif secim == '5':
         break
     else:
         print("Hatalı değer tuşladınız...")
