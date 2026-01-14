@@ -10,7 +10,7 @@ class Kutuphane:
             print("---KÜTÜPHANE ARŞİVİ---")
             for ad, bilgi in self.kitaplar.items():
                 durum_ikonu = "✅" if bilgi["durum"] == "Rafta" else "❌"
-                print(f"{durum_ikonu}{ad}-yazar: {bilgi['yazar']}({bilgi['durum']})")
+                print(f"{durum_ikonu}{ad}-yazar: {bilgi['yazar']}({bilgi['durum']})") # değişiklik
                 
     def kitap_ekle(self):
         kitap_ad = input("Eklenecek kitap adını giriniz: ")
